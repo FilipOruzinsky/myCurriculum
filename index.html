@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/flixtor/flaticon-font@1.0.0/font/flaticon.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.5.0/html2pdf.bundle.min.js"></script>
+
+
 
 </head>
 
@@ -17,19 +21,19 @@
   <div class="container">
     <div class="profile">
       <div class="profile_container">
-        <div class="profile_profileImg">
-          <img src="./images/ja.png" alt="Filip Oruzinsky">
-        </div>
         <div>
           <h1 class="profile_name">
             <span class="profile_name_firstName">Filip</span>
             <span class="profile_name_lastName">Oružinský</span>
           </h1>
-          <p class="profile_title"> Junior Software Developer</p>
+          <p class="profile_title">Junior Software Developer</p>
           <p class="description profile_description">
             As a Junior Software Developer, I am passionate about tackling new challenges and continuously expanding my coding skills. I thrive in dynamic environments where I can learn and grow, staying up-to-date with the latest technologies and best practices. My enthusiasm for problem-solving and my commitment to professional development drive me to deliver quality software solutions.
           </p>
-          <a class="downloadBtn" href="./cv.pdf" download="Resume.pdf">Download Resume</a>
+          <a class="downloadBtn" href="#" onclick="generatePDF()">Download Resume</a>
+        </div>
+        <div class="profile_profileImg">
+          <img src="./images/ja.png" alt="Filip Oruzinsky">
         </div>
       </div>
     </div>
@@ -43,6 +47,7 @@
           <li>MySql</li>
           <li>Gitlab/Github</li>
           <li>Jira</li>
+          <li>Scrum</li>
         </ul>
       </div>
       <div class="ref">
@@ -53,6 +58,7 @@
           <p class="description">Contact Email: marcel.boldizar@t-systems.com</p>
         </div>
       </div>
+
 
       <div class="edu">
         <h3 class="title">Education</h3>
@@ -150,20 +156,18 @@
         <h3 class="title">Socials</h3>
         <div class="social_items">
           <a href="https://github.com/FilipOruzinsky?tab=projects" target="_b" class="social_item">
-            <i data-feather="github"></i>
+            <img src="./images/gitHub.png">
             <span>/FilipOruzinsky</span>
           </a>
           <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" class="social_item">
-            <i data-feather="linkedin"></i>
+            <img src="./images/linkedin.png">
             <span>/FilipOružinský</span>
           </a>
         </div>
       </div>
     </div>
   </div>
-  <script>
-    feather.replace()
-  </script>
+
 </body>
 
 </html>

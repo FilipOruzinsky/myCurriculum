@@ -27,7 +27,7 @@ a {
 	color: white;
 }
 .description {
-	margin-top: 1rem;
+	margin-top: 2rem;
 	font-size: 1.5rem;
 	font-weight: 400;
 	color: var(--text-color);
@@ -55,7 +55,7 @@ a {
 	font-weight: 400;
 }
 
-/* layouts */
+/* layouts cely container */
 .container {
 	max-width: 1000px;
 	width: 90%;
@@ -64,9 +64,10 @@ a {
 	padding: 5rem;
 	background: #070707;
 	grid-template-columns: 1fr 1fr;
-	gap: 4rem;
+	gap: 10rem;
 }
-// for smaller devices
+
+/* for smaller devices */
 @media only screen and (max-width: 768px) {
 	.container {
 		width: 100%;
@@ -109,10 +110,31 @@ a {
 /* profile */
 .profile_container {
 	display: flex;
+	flex-direction: column; /* Stack items vertically */
+	align-items: flex-end; /* Align items to the right */
 	gap: 2rem;
+	position:relative;
 }
+
+.profile_container > div {
+	display: flex;
+	flex-direction: column; /* Stack text and image inside each div */
+	align-items: flex-end; /* Align text to the right */
+}
+/*profilovka*/
 .profile_profileImg {
-	max-width: 250px;
+    margin:0 auto;
+	max-width: 350px;
+	max-height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    object-fit: contain; /* Ensure the image is fully visible */
+    object-position: center;
+
+
+
+
 }
 .profile_name_firstName {
 	color: white;
@@ -121,6 +143,8 @@ a {
 	text-transform: uppercase;
 	display: block;
 	margin-bottom: -0.8rem;
+	width: 100%; /* Take full width for alignment */
+	text-align: right; /* Align text to the right */
 }
 .profile_name_lastName {
 	color: var(--primary-color);
@@ -128,17 +152,27 @@ a {
 	font-size: clamp(2.5rem, 15vw, 7rem);
 	text-transform: uppercase;
 	display: block;
+	width: 100%; /* Take full width for alignment */
+	text-align: right; /* Align text to the right */
 }
 .profile_title {
 	font-size: 1.5rem;
 	font-weight: 400;
 	text-transform: uppercase;
+	display: block;
+	width: 100%; /* Take full width for alignment */
+	text-align: right; /* Align text to the right */
+}
+.profile_description {
+	text-align: right; /* Align profile description to the right */
 }
 .downloadBtn {
-	display: block;
+	display: flex;
 	text-decoration: underline;
 	font-size: 1.6rem;
 	margin-top: 1rem;
+	width: 100%; /* Take full width for alignment */
+	justify-content: flex-end; /* Align the button to the right */
 }
 .downloadBtn:hover {
 	color: #b3ffb3;
@@ -206,24 +240,33 @@ a {
 	object-fit: contain; /* Makes sure images are not distorted */
 }
 
-/* socials */
+/* Socials */
 .social_items {
-	margin-top: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem; /* Spacing between each social item */
 }
+
 .social_item {
-	margin-top: 1.5rem;
-	font-size: 1.5rem;
-	display: flex;
-	gap: 0.5rem;
-	align-items: center;
-	justify-content: flex-start;
-	color: var(--text-color);
+  font-size: 1.5rem; /* Base font size for text */
+  display: flex;
+  flex-direction: row; /* Aligns the icon and text horizontally */
+  align-items: center; /* Centers the content vertically */
+  gap: 0.5rem; /* Space between the icon and text */
+  color: var(--text-color);
+  transition: color 0.3s ease; /* Smooth transition effect on hover */
 }
+
 .social_item:hover {
-	color: var(--primary-color);
+  color: var(--primary-color);
 }
-.social_item svg {
-	width: 2rem;
+
+.social_item img {
+  width: 32px;  /* Icon size */
+  height: 32px; /* Consistent icon size */
+  object-fit: contain;
 }
 
 hr {
